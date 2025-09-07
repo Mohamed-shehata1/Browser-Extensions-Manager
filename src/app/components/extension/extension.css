@@ -1,0 +1,124 @@
+/* card */
+.extension {
+  min-height: 180px;
+  max-height: 220px;
+  height: 100%;
+}
+/* card night */
+.extension.night {
+  background-color: var(--blue-800);
+  border: 1px solid var(--blue-600);
+}
+.extension-name.night {
+  color: var(--white-0);
+}
+.extension-desc.night {
+  color: var(--white-300);
+}
+.extension-remove {
+  border-radius: 20px;
+  padding: 5px 12px;
+}
+.extension-remove.night {
+  color: var(--white-0);
+  background-color: var(--blue-800);
+  border: 1px solid var(--blue-600);
+}
+.extension-remove.night:hover {
+  color: var(--blue-900);
+  background-color: var(--Red-500);
+  border: 1px solid var(--blue-900);
+}
+.extension-remove.night:focus {
+  background-color: var(--blue-600);
+  border: 1px solid var(--blue-900);
+  outline: 2px solid var(--Red-500);
+}
+.extension-remove.night:focus:hover {
+  color: var(--blue-900);
+  background-color: var(--Red-500);
+  border: 1px solid var(--blue-900);
+  outline: 2px solid var(--Red-500);
+}
+/* card day */
+.extension.day {
+  background-color: var(--white-0);
+  border: 1px solid var(--white-300);
+}
+.extension-name.day {
+  color: var(--blue-900);
+}
+.extension-desc.day {
+  color: var(--blue-600);
+}
+.extension-remove.day {
+  color: var(--blue-900);
+  background-color: var(--white-0);
+  border: 1px solid var(--white-300);
+}
+.extension-remove.day:hover {
+  color: var(--white-0);
+  background-color: var(--Red-700);
+  border: 1px solid var(--Red-700);
+}
+.extension-remove.day:focus {
+  color: var(--blue-900);
+  background-color: var(--white-100);
+  border: 1px solid var(--white-0);
+  outline: 2px solid var(--Red-700);
+}
+.extension-remove.day:focus:hover {
+  color: var(--white-0);
+  background-color: var(--Red-700);
+  border: 1px solid var(--white-0);
+  outline: 2px solid var(--Red-700);
+}
+
+/*switch*/
+.form-check-input {
+  border: none;
+  box-shadow: none;
+}
+.form-check-input:hover {
+  cursor: pointer;
+}
+/*night*/
+.form-check-input.night {
+  background-color: #525868;
+}
+.form-check-input.night:focus {
+  border: 1px solid var(--blue-900);
+  outline: 2px solid var(--Red-500);
+}
+.form-check-input.night:checked {
+  background-color: var(--Red-500);
+}
+.form-check-input.night:checked:hover {
+  background-color: var(--Red-700);
+}
+.form-check-input.night:checked:focus {
+  outline: 2px solid var(--Red-500);
+}
+.form-check-input.night:checked:focus:hover {
+  outline: 2px solid var(--Red-700);
+} 
+/*day*/
+.form-check-input.day {
+  background-color: #C5C5C5;
+}
+.form-check-input.day:focus {
+  outline: 2px solid var(--Red-500);
+  border: 1px solid var(--white-0);
+}
+.form-check-input.day:checked {
+  background-color: var(--Red-700);
+}
+.form-check-input.day:checked:hover {
+  background-color: var(--Red-500);
+}
+.form-check-input.day:checked:focus {
+  outline: 2px solid var(--Red-700);
+}
+.form-check-input.day:checked:focus:hover {
+  outline: 2px solid var(--Red-500);
+} 
