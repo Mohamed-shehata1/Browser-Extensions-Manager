@@ -10,7 +10,7 @@ import { IExtension } from '../../models/extension';
 })
 export class Extension {
   @Input() extension!: IExtension;
-  @Input() theme: 'day' | 'night' = 'day';
+  @Input() theme!: 'day' | 'night';
 
   @Output() toggle = new EventEmitter<IExtension>();
   @Output() remove = new EventEmitter<IExtension>();

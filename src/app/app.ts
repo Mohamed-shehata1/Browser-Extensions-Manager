@@ -1,20 +1,23 @@
 import { Component, signal, OnInit, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Extension } from './components/extension/extension';
+import { Header } from './header/header';
 import { IExtension } from './models/extension';
 import { ExtensionService } from './extension';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, Extension],
+  imports: [CommonModule, Extension, Header],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App implements OnInit {
 
   protected readonly title = signal('extensions-manager-app');
-  theme: 'day' | 'night' = 'day';
+
   selected = signal<'all' | 'active' | 'inactive'>('all');
+
+    theme: 'day' | 'night' = 'day';
 
   extensionList = signal<IExtension[]>([]);
 

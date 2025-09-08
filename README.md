@@ -1,59 +1,101 @@
-# ExtensionsManagerApp
+# Extensions Manager App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3.
+A simple Angular front-end project to manage and display a list of browser extensions.  
+This app demonstrates the use of Angular core features, Bootstrap styling, and a JSON Server as a mock back-end.
 
-## Development server
+This is a solution to the [Browser extensions manager UI challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/browser-extension-manager-ui-yNZnOfsMAp).
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## Table of Contents
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [What I Learned](#what-i-learned)
+  - [Angular](#angular)
+  - [Bootstrap](#bootstrap)
+  - [JSON Server](#json-server)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## Features
+- Demonstrates key Angular concepts: property binding, event handling, components communication, and signals.
+- View a list of extensions fetched from a local JSON file.
+- Toggle extensions between active and inactive states
+- Filter active and inactive extensions
+- Remove extensions from the list
+- Select their color theme
+- Clean UI styled with Bootstrap utility classes.
+- View the optimal layout for the interface depending on their device's screen size
+- hover and focus states for all interactive elements on the page
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## Tech Stack
+- **Angular** – Front-end framework for building component-based web apps.
+- **Bootstrap** – Utility classes for responsive styling.
+- **JSON Server** – Simple mock REST API for development.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## What I Learned
 
-## Building
+### Angular
+I deepened my understanding of core Angular concepts and how they are applied in real projects:
 
-To build the project run:
+- **`ngOnInit` Lifecycle Hook**  
+  Runs once after component initialization. Perfect for loading initial data or setting up logic.
 
-```bash
-ng build
-```
+- **`@Input` Decorator**  
+  Enables passing data from a parent component to a child component, supporting reusable, configurable components.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- **`@Output` and `EventEmitter`**  
+  Used to send events or data changes from a child back to the parent, making components interactive and decoupled.
 
-## Running unit tests
+- **Property Binding**  
+  Dynamically binds component properties to DOM elements, ensuring the UI automatically updates when data changes.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- **Class Binding & `ngClass`**  
+  Applies or toggles CSS classes based on component state, enabling dynamic styling and theme handling.
 
-```bash
-ng test
-```
+- **Event Binding**  
+  Connects DOM events (click, input, etc.) to component methods for user interaction.
 
-## Running end-to-end tests
+- **Services & Dependency Injection**  
+  Centralizes reusable logic and state management, promoting cleaner and testable code.
 
-For end-to-end (e2e) testing, run:
+- **`HttpClient`**  
+  Simplifies making HTTP requests to fetch or send data, essential for communicating with APIs or mock servers.
 
-```bash
-ng e2e
-```
+- **`Observable`**  
+  Provides a robust way to handle asynchronous data streams from APIs, allowing real-time updates.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- **Signals & Computed Signals (Angular v16+)**  
+  A new reactive state management approach. Signals track state; computed signals derive new values efficiently, reducing boilerplate.
 
-## Additional Resources
+- **`@for` Syntax**  
+  Modern template loop syntax to iterate over lists more concisely compared to `*ngFor`.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Bootstrap
+I practiced using **basic Bootstrap classes** to quickly style elements and create a responsive layout without writing extensive custom CSS.  
+Key advantages:
+- Rapid UI prototyping.
+- Consistent design system.
+- Mobile-first responsiveness.
+
+### JSON Server
+I used **JSON Server** to mock a back-end API:
+- Served data from a local `db.json` file.
+- Enabled quick testing of HTTP requests without setting up a real database.
+- Perfect for early development stages and demos.
+
+---
+
+## Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org) and npm installed.
+- Angular CLI globally installed:  
+  ```bash
+  npm install -g @angular/cli

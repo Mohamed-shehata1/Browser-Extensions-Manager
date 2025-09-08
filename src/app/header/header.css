@@ -1,0 +1,40 @@
+/* header */
+header.day {
+  background-color: var(--white-0);
+}
+header.night {
+  background-color: var(--blue-800);
+}
+.logo.day {
+  color: var(--blue-900);
+}
+.logo.night {
+  color: var(--white-0);
+}
+/* theme icon */
+.theme-icon {
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+/* theme icon day */
+.theme-icon.day {
+  background-color: var(--white-100);
+}
+.theme-icon.day:hover {
+  background-color: var(--white-300);
+}
+.theme-icon.day:focus {
+  border: 1px solid var(--white-0);
+  outline: 2px solid var(--Red-500);
+}
+/* theme icon night */
+.theme-icon.night {
+  background-color: var(--blue-700);
+}
+.theme-icon.night:hover {
+  background-color: var(--blue-600);
+}
+.theme-icon.night:focus {
+  border: 1px solid var(--blue-900);
+  outline: 2px solid var(--Red-500);
+}
