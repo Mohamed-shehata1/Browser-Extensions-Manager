@@ -1,13 +1,15 @@
 import { Component, signal, OnInit, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Extension } from './components/extension/extension';
-import { Header } from './header/header';
+import { Header } from './components/header/header';
 import { IExtension } from './models/extension';
 import { ExtensionService } from './extension';
+import { Nav } from './components/nav/nav';
+import { SelectOption } from './models/select-option'
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, Extension, Header],
+  imports: [CommonModule, Extension, Header, Nav],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -15,10 +17,8 @@ export class App implements OnInit {
 
   protected readonly title = signal('extensions-manager-app');
 
-  selected = signal<'all' | 'active' | 'inactive'>('all');
-
-    theme: 'day' | 'night' = 'day';
-
+  selected = signal<SelectOption>('all');
+  theme: 'day' | 'night' = 'day';
   extensionList = signal<IExtension[]>([]);
 
   filteredExtensions = computed(() => {
@@ -43,7 +43,7 @@ export class App implements OnInit {
     this.theme = this.theme === 'day' ? 'night' : 'day';
   }
 
-  select(option: 'all' | 'active' | 'inactive') {
+  selectOption(option: SelectOption) {
     this.selected.set(option);
   }
 

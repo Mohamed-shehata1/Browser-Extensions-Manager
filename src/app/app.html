@@ -1,53 +1,21 @@
 <main [ngClass]="theme" class="py-5">
   <div class="container">
-
-    <app-header [theme]="theme" (toggleThemeReq)="toggleTheme()"></app-header>
-
-    <nav class="d-flex align-items-center justify-content-between mt-5">
-      <h2 [ngClass]="theme">Extension List</h2>
-      <ul class="m-0 p-0 d-flex">
-        <li
-          class="shadow-sm"
-          (click)="select('all')"
-          [ngClass]="theme"
-          [class.active]="selected() === 'all'"
-          role="button"
-          tabindex="0"
-        >
-          All
-        </li>
-        <li
-          class="shadow-sm"
-          (click)="select('active')"
-          [ngClass]="theme"
-          [class.active]="selected() === 'active'"
-          role="button"
-          tabindex="0"
-        >
-          Active
-        </li>
-        <li
-          class="shadow-sm"
-          (click)="select('inactive')"
-          [ngClass]="theme"
-          [class.active]="selected() === 'inactive'"
-          role="button"
-          tabindex="0"
-        >
-          Inactive
-        </li>
-      </ul>
-    </nav>
+    <app-header [theme]="theme" (toggleThemeReq)="toggleTheme()" />
+    <app-nav
+      [theme]="theme"
+      [selected]="selected()"
+      (selectOptionReq)="selectOption($event)" 
+    />
     <section class="extensions gap-3 mt-5">
       @for(extension of filteredExtensions(); track extension.name) {
-        <div>
-          <app-extension
-            [extension]="extension"
-            [theme]="theme"
-            (toggle)="toggleActivation($event)"
-            (remove)="removeExtension($event)"
-          ></app-extension>
-        </div>
+      <div>
+        <app-extension
+          [extension]="extension"
+          [theme]="theme"
+          (toggle)="toggleActivation($event)"
+          (remove)="removeExtension($event)"
+        />
+      </div>
       }
     </section>
   </div>

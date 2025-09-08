@@ -11,7 +11,7 @@ export class Header {
   @Input() theme!: 'day' | 'night';
   @Output() toggleThemeReq = new EventEmitter<void>();
 
-  requestToggle() {
+  toggleTheme() {
     this.toggleThemeReq.emit();
   }
 }
