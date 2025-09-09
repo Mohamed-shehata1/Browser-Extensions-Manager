@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, WritableSignal } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SelectOption, selectOptions } from '../../models/select-option'
 
@@ -10,8 +10,9 @@ import { SelectOption, selectOptions } from '../../models/select-option'
 })
 export class Nav {
   @Input() theme!: 'day' | 'night';
-  @Input() selected!: string;
+  @Input() selected!: SelectOption;
   @Output() selectOptionReq = new EventEmitter<SelectOption>();
+
   selectOptions = selectOptions;
 
   selectOption(selection: SelectOption) {
