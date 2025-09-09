@@ -78,7 +78,7 @@ I deepened my understanding of core Angular concepts and how they are applied in
   Modern template loop syntax to iterate over lists more concisely compared to `*ngFor`.
 
 ### Bootstrap
-I practiced using **basic Bootstrap classes** to quickly style elements and create a responsive layout without writing extensive custom CSS.  
+I practiced using **Bootstrap classes** to quickly style elements and create a responsive layout without writing extensive custom CSS.  
 Key advantages:
 - Rapid UI prototyping.
 - Consistent design system.
